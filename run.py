@@ -12,10 +12,12 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + "Treasure_Chest_Long_1.wav")
 
 while True:
-  rand = random.randint(0, len(onlyfiles) - 1)
+  # wait so the sounds are not distracting
   sleep(1)
-  sleep(random.randint(30,3600))
-  
+  sleep(random.randint(1800,3600))
+
+
+  rand = random.randint(0, len(onlyfiles) - 1)
   #print(rand)
   #print(onlyfiles)
   os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + onlyfiles[rand])
