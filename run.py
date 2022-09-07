@@ -14,11 +14,12 @@ os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + "Treasure_C
 while True:
   # wait so the sounds are not distracting
   sleep(1)
-  sleep(random.randint(1800,3600))
+  random_Time = random.randint(1800,3600)
+  print(random_Time)
+  sleep(random_Time)
 
-
+  # now play the sounds
   rand = random.randint(0, len(onlyfiles) - 1)
   #print(rand)
   #print(onlyfiles)
   os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + onlyfiles[rand])
-  #sleep(random.randint(30,3600))
