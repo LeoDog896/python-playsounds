@@ -5,7 +5,7 @@ from os import listdir
 import pathlib
 from os.path import isfile, join
 
-mypath = '/home/pi/python-playsounds/'
+mypath = '/home/pi/python-playsounds/sounds/'
 
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
