@@ -13,10 +13,10 @@ os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + "Treasure_C
 
 while True:
   rand = random.randint(0, len(onlyfiles) - 1)
+  sleep(1)
   sleep(random.randint(30,3600))
   
   #print(rand)
   #print(onlyfiles)
   os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + onlyfiles[rand])
-  sleep(1)
   #sleep(random.randint(30,3600))
