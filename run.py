@@ -10,7 +10,7 @@ mypath = '/home/pi/python-playsounds/sounds/'
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 while True:
-  rand = random.randint(0, len(onlyfiles))
+  rand = random.randint(0, len(onlyfiles) - 1)
   print(rand)
   print(onlyfiles)
   os.system("cvlc --gain 1000 --vout none --play-and-exit " +  mypath + onlyfiles[rand])
