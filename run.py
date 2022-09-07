@@ -13,6 +13,6 @@ while True:
   rand = random.randint(0, len(onlyfiles))
   print(rand)
   print(onlyfiles)
-  os.system("cvlc --gain 1000 --vout none --play-and-exit /home/pi/sound/" + onlyfiles[rand])
+  os.system("cvlc --gain 1000 --vout none --play-and-exit " +  mypath + onlyfiles[rand])
   sleep(1)
  #sleep(random.randint(30,3600))
