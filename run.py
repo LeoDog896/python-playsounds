@@ -9,7 +9,7 @@ mypath = '/home/pi/python-playsounds/sounds/'
 
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + "Treasure_Chest_Long_1.wav")
+os.system("cvlc --gain 100 --vout none --play-and-exit " +  mypath + "Treasure_Chest_Long.wav")
 
 while True:
   # wait so the sounds are not distracting
