@@ -15,7 +15,7 @@ while True:
   # wait so the sounds are not distracting
   sleep(1)
   random_Time = random.randint(1800,3600)
-  print(random_Time)
+  #print(random_Time)
   sleep(random_Time)
 
   # now play the sounds
