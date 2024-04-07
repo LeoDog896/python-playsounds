@@ -18,8 +18,8 @@ print("Sounds available: " + str(files))
 print("Ctrl + C to stop")
 
 args = sys.argv
-lower = args[1] if len(args) > 1 else 60 * 30
-upper = args[2] if len(args) > 2 else 60 * 60
+lower = int(args[1]) if len(args) > 1 else 60 * 30
+upper = int(args[2]) if len(args) > 2 else 60 * 60
 
 while True:
   time = random.randint(lower, upper)
