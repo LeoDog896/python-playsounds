@@ -3,6 +3,7 @@ import random
 from time import sleep
 from os import listdir
 from os.path import isfile, join
+import sys
 
 sound_path = os.path.dirname(os.path.realpath(__file__)) + "/sounds/"
 effect_path = os.path.dirname(os.path.realpath(__file__)) + "/effects/"
@@ -16,8 +17,9 @@ print("Sound directory: " + sound_path)
 print("Sounds available: " + str(files))
 print("Ctrl + C to stop")
 
-lower = 60 * 30
-upper = 60 * 60
+args = sys.argv
+lower = args[1] if len(args) > 1 else 60 * 30
+upper = args[2] if len(args) > 2 else 60 * 60
 
 while True:
   time = random.randint(lower, upper)
