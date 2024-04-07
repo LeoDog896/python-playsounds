@@ -9,7 +9,7 @@ effect_path = os.path.dirname(os.path.realpath(__file__)) + "/effects/"
 
 files = [f for f in listdir(sound_path) if isfile(join(sound_path, f))]
 
-os.system("aplay " +  sound_path + "open.ogg")
+os.system("aplay " + effect_path + "open.ogg")
 
 print("Playing sounds every 30-60 minutes")
 print("Sound directory: " + sound_path)
