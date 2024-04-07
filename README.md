@@ -11,3 +11,9 @@ pm2 start run.py --name playsounds
 pm2 startup
 pm2 save
 ```
+
+to restart the script use
+
+```sh
+pm2 restart playsounds
+```
