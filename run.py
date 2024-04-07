@@ -31,3 +31,6 @@ while True:
   file = files[rand]
   print("Playing " + file)
   os.system("paplay " +  sound_path + files[rand])
+
+# if keyboard interrupt, play close sound
+os.system("paplay " + effect_path + "close.ogg")
