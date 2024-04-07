@@ -9,7 +9,7 @@ effect_path = os.path.dirname(os.path.realpath(__file__)) + "/effects/"
 
 files = [f for f in listdir(sound_path) if isfile(join(sound_path, f))]
 
-os.system("aplay " + effect_path + "open.ogg")
+os.system("paplay " + effect_path + "open.ogg")
 
 print("Playing sounds every 30-60 minutes")
 print("Sound directory: " + sound_path)
@@ -28,4 +28,4 @@ while True:
   rand = random.randint(0, len(files) - 1)
   file = files[rand]
   print("Playing " + file)
-  os.system("aplay " +  sound_path + files[rand])
+  os.system("paplay " +  sound_path + files[rand])
