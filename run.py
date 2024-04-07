@@ -4,14 +4,15 @@ from time import sleep
 from os import listdir
 from os.path import isfile, join
 
-my_path = os.path.dirname(os.path.realpath(__file__)) + "/sounds/"
+sound_path = os.path.dirname(os.path.realpath(__file__)) + "/sounds/"
+effect_path = os.path.dirname(os.path.realpath(__file__)) + "/effects/"
 
-files = [f for f in listdir(my_path) if isfile(join(my_path, f))]
+files = [f for f in listdir(sound_path) if isfile(join(sound_path, f))]
 
-os.system("aplay " +  my_path + "Treasure_Chest_Long.wav")
+os.system("aplay " +  sound_path + "open.ogg")
 
 print("Playing sounds every 30-60 minutes")
-print("Sound directory: " + my_path)
+print("Sound directory: " + sound_path)
 print("Sounds available: " + str(files))
 print("Ctrl + C to stop")
 
@@ -27,4 +28,4 @@ while True:
   rand = random.randint(0, len(files) - 1)
   file = files[rand]
   print("Playing " + file)
-  os.system("aplay " +  my_path + files[rand])
+  os.system("aplay " +  sound_path + files[rand])
